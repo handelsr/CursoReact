@@ -1,22 +1,23 @@
-// Destructuracion
-// Asignacion desestructurante
-const persona = {
-    nombre:'Tony',
-    edad:45,
-    clave:'Ironman',
-    rango: 'Soldado'
-};
+import { getHeroeById } from './bases/08-imp-exp'
 
-// const { nombre, edad, clave } = persona;
+// const promesa = new Promise(( resolve, reject ) => {
+//     setTimeout(() => {
+//         const heroe = getHeroeById(2);
+//         resolve( heroe );
+//     }, 2000);
+// });
 
-// console.log(nombre);
-// console.log(edad);
-// console.log(clave);
+// promesa.then(( heroe ) => {
+//     console.log( heroe );
+// }).catch(err => console.warn( err ))
 
-const retornaPersona = ({ nombre, edad, rango = 'capitan'}) => {
-    // const { nombre, edad, clave } = usuario;
-
-    console.log( nombre, edad, rango );
+const getHeroeByIdAscync = (id) => {
+const promesa = new Promise(( resolve, reject ) => {
+    setTimeout(() => {
+        const heroe = getHeroeById(id);
+        resolve( heroe );
+    }, 2000);
+});
 }
 
-retornaPersona(persona);
+getHeroeByIdAscync(4);
