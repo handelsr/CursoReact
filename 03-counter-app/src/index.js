@@ -9,5 +9,5 @@ import './index.css'
 
 const divRoot = document.querySelector('#app');
 
-// ReactDOM.render( <PrimeraAPP saludo = "Hola Mundo" /> , divRoot );
+// ReactDOM.render( <PrimeraAPP saludo = "Hola, Soy Goku" /> , divRoot );
 ReactDOM.render( <CounterApp value = { 10 } /> , divRoot );
